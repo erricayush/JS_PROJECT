@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+
+    <div class="container flex flex-col justify-center items-center">
+        <div class="font-bold text-xl rounded m-10 px-60 py-10 bg-gradient-to-r from-blue-400 to-cian-500">
+            <h1>Resigtration form</h1>
+        </div>
+
+        <form action="" class="flex flex-col gap-5 px-60">
+            <div class="flex ">
+                <div class="flex flex-col">
+                    <label for="username">Username</label>
+                    <input class="border px-40 py-2 foutline-0 focus:border-[#777]" type="text" name="" id="username"
+                        placeholder="Enter your full name" autocomplete="off">
+                    <small>Error Msg</small>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+            <div class="flex ">
+                <div class="flex flex-col">
+                    <label for="email">Email</label>
+                    <input class="border px-40 py-2" type="text" name="" id="email" placeholder="Enter your Email">
+                    <small>Error Msg</small>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+            <div class="flex">
+                <div class="flex flex-col">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input class="border px-40 py-2" type="number" name="" id="phoneNumber"
+                        placeholder="Enter your phoneNumber">
+                    <small>Error Msg</small>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+            <div class="flex">
+                <div class="flex flex-col">
+                    <label for="Password">Password</label>
+                    <input class="border px-40 py-2" type="password" name="" id="Password"
+                        placeholder="Enter your Password">
+                    <small>Error Msg</small>
+
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+            <div class="flex ">
+                <div class=" flex flex-col">
+                    <label for="PasswordCheck">PasswordCheck</label>
+                    <input class="border px-40 py-2" type="password" name="" id="PasswordCheck"
+                        placeholder="Enter your Password again">
+                    <small>Error Msg</small>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+
+
+            <input type="submit" name="" id="" class="btn bg-gradient-to-r from-blue-400 to-cian-500 ">
+        </form>
+    </div>
+
+
+    <script src="validation.js"></script>
+</body>
+
+</html>

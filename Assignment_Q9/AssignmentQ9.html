@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul class="nav-links">
+            <li><a href="#section-tabs" class="nav-link">Tabs</a></li>
+            <li><a href="#section-slider" class="nav-link">Slider</a></li>
+            <li><a href="#section-reveal" class="nav-link">Reveal</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="section-tabs" class="section">
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="1">Tab 1</button>
+                    <button class="tab-btn" data-tab="2">Tab 2</button>
+                </div>
+                <div class="tab-content active" id="tab-1">Content for Tab 1</div>
+                <div class="tab-content" id="tab-2">Content for Tab 2</div>
+            </div>
+        </section>
+
+        <section id="section-slider" class="section">
+            <div class="slider">
+                <div class="slide"><img src="img1.avif" alt="Slide 1" loading="lazy"></div>
+                <div class="slide"><img src="img2.jpeg" alt="Slide 2" loading="lazy"></div>
+                <button class="slider-btn btn-prev">←</button>
+                <button class="slider-btn btn-next">→</button>
+            </div>
+        </section>
+
+        <section id="section-reveal" class="section section-hidden">
+            <h2>Revealing Section</h2>
+            <p>I appear when you scroll to me!</p>
+        </section>
+    </main>
+    <script src="AssignmentQ9.js"></script>
+</body>
+</html>

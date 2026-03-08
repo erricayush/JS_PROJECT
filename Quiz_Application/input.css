@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+.correct {
+    background-color: #66e79e !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: #eb7575 !important;
+    color: white;
+}

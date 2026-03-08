@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="w-screen h-screen flex justify-center items-center">
+    <div class="w-180 h-auto p-10 bg-gray-100 rounded-2xl">
+      <div class="flex justify-between font-semibold text-xl text-blue-500">
+        <h4>Score:</h4>
+        <h4>Question-1/10</h4>
+      </div>
+      <div class="flex justify-center py-8">
+        <h2 class="question text-2xl font-bold">
+         question
+        </h2>
+      </div>
+
+      <div class="answers-button flex flex-col gap-3">
+        <div
+          class="btn border py-4 flex justify-center rounded-xl border-blue-400 hover:bg-gray-50 cursor-pointer"
+        >
+          <button>ans</button>
+        </div>
+        <div
+          class="btn border py-4 flex justify-center rounded-xl border-blue-400 hover:bg-gray-50 cursor-pointer"
+        >
+          <button>ans</button>
+        </div>
+        <div
+          class="btn border py-4 flex justify-center rounded-xl border-blue-400 hover:bg-gray-50 cursor-pointer"
+        >
+          <button>ans</button>
+        </div>
+        <div
+          class="btn border py-4 flex justify-center rounded-xl border-blue-400 hover:bg-gray-50 cursor-pointer"
+        >
+          <button>ans</button>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="nextBtn flex justify-center py-5 mt-3 border bg-gray-800 text-white font-semibold rounded-xl cursor-pointer"
+        >
+          <button class="cursor-pointer">Next-Question</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+/* 1. Header and X-Mark */
+.swal-custom-header {
+    position: relative;
+    height: 10px;
+}
+
+.swal-x-mark {
+    position: absolute;
+    top: -35px; /* Adjust based on title position */
+    right: -10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #9ca3af; /* Light gray X */
+    cursor: pointer;
+}
+
+/* 2. The Horizontal Line */
+.swal-hr {
+    border: 0;
+    border-top: 1px solid #f3f4f6; /* Very light line */
+    margin: 20px -20px; /* Pulls the line to the edges of the modal */
+}
+
+/* 3. Title Styling (Purple/Blue) */
+.swal-title {
+    color: #5d5fef !important;
+    text-align: left !important;
+    padding: 20px 0 0 25px !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+/* 4. Body Text */
+.swal-custom-body {
+    text-align: left;
+    color: #4b5563;
+    font-size: 16px;
+    padding: 10px 10px 20px 5px;
+}
+
+/* 5. Buttons Styling */
+.swal-button--confirm.btn-okay {
+    background-color: #ef4444 !important; /* The Red from your photo */
+    border-radius: 10px !important;
+    padding: 10px 25px !important;
+}
+
+.swal-button--cancel.btn-cancel {
+    background-color: #f3f4f6 !important; /* The Gray from your photo */
+    color: #6b7280 !important;
+    border-radius: 10px !important;
+}
+
+/* Remove the default SweetAlert icon space */
+.swal-icon {
+    display: none;
+}

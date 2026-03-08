@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>javascript crud operation</title>
+</head>
+
+<body class="bg-gray-200">
+    <div class="container w-full">
+        <h1 class="text-center text-red-400 font-bold text-2xl p-4 mt-4">JAVASCRIPT CRUD OPERATION</h1>
+        <div class="row  w-[90%] mx-auto mt-5 ">
+            <div class="bg-blue-700  md:flex     gap-2 justify-between items-center mx-auto p-5 ">
+                <div>
+                    <h1 class="font-bold text-white text-xl">@JUST FOR CODE</h1>
+                </div>
+                <div>
+                    <button class="btn  bg-white rounded p-1">
+                        <input type="search" placeholder="search" class="search">
+                    </button>
+                    <button class="btn delete-all-btn bg-red-400 text-white font-semibold p-1 cursor-pointer">
+                        <i class="fa fa-minus text-white "></i>Delete all
+                    </button>
+                    <button onclick="openModal()" class="btn addNewUser bg-green-600 text-white font-semibold p-1 cursor-pointer">
+                        <i class="fa fa-plus text-white"></i>Add new User
+                    </button>
+                </div>
+            </div>
+            <div class="w-full  mt-3">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="flex justify-between  px-4 py-2">
+                                <th class="w-10 text-left">Sr.</th>
+                                <th class="flex-1 text-left">Name</th>
+                                <th class="flex-1 text-left">Profile</th>
+                                <th class="flex-1 text-left">Email</th>
+                                <th class="flex-1 text-left">Mobile</th>
+                                <th class="flex-1 text-left">DOB</th>
+                                <th class="w-20 text-center">Action</th>
+                            </tr>
+                            
+                        </thead>
+                        
+                        <tbody class="reg-list">
+                            <!-- <tr class="flex justify-between items-center  px-4 py-2 hover:bg-gray-50">
+                                <td class="w-10">1</td>
+                                <td class="flex-1">Alok</td>
+                                <td class="flex-1">Software Engineer</td>
+                                <td class="flex-1">alok@gmail.com</td>
+                                <td class="flex-1">234567890</td>
+                                <td class="flex-1">11-02-2003</td>
+                                <td class="w-20 flex justify-center gap-2">
+                                    <button class="bg-blue-500 text-white p-1 rounded">
+                                        <i class="fa fa-edit"></i>
+                                    </button>
+                                    <button class="bg-red-500 text-white p-1 rounded">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div  class=" hidden fixed inset-0 z-50 flex items-center justify-center p-5 bg-opacity-50 backdrop-blur-sm" id="myModal">
+            <!-- <div class="modal-overlay absolute inset-0" onclick="closeModal()"></div> -->
+            <div class="modal-dialog">
+                <div class="modal-content bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative z-10 animate__animated animate__zoomIn">
+                    <div class="modal-header flex justify-between ">
+                        <h4 class="font-bold text-2xl pl-7" >Add New User</h4>
+                        <button onclick="closeModal()" class="p-5 formModalCrossBtn cursor-pointer"> <i class="fa fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <form class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6 register-form">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700">Name<span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" required
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700">Profile <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" required placeholder="(Multiple allowed, comma separated)"
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700">Email Address<span
+                                        class="text-red-500">*</span></label>
+                                <input type="email" required placeholder="example@gmail.com"
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700">Mobile <span
+                                        class="text-red-500">*</span></label>
+                                <input type="number" required
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700">DOB <span
+                                        class="text-red-500">*</span></label>
+                                <input type="date" required value="Jan 2026"
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 bg-gray-50 outline-none">
+                            </div>
+                            <!-- <div>
+                                <label class="block text-sm font-semibold text-gray-700"> <span
+                                        class="text-red-500">*</span></label>
+                                <input type="text" value="fofile" required
+                                    class="mt-1 w-full border border-gray-300 rounded-md p-2 bg-gray-50 outline-none">
+                            </div> -->
+
+                            <div class="col-span-1 md:col-span-2 flex justify-end gap-3 mt-4">
+                                <button  type="button" id="closeModalBtn" onclick="closeModal()"
+                                    class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">Cancel</button>
+                                <button  type="submit" onclick="closeModal()"
+                                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 shadow-lg transition" >Save
+                                    Review</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
